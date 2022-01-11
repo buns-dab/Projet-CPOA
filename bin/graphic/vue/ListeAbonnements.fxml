@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic.controller.ListeAbonnementsController">
+   <children>
+      <FlowPane alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Label text="Liste des abonnements" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+      <TableView fx:id="TableListeAbonnements" prefHeight="375.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="ColonneIdAbonnement" prefWidth="100.0" text="id_abonnement" />
+          <TableColumn fx:id="ColonneDateDebutAbonnement" prefWidth="150.0" text="date_debut" />
+            <TableColumn fx:id="ColonneDateFinAbonnement" prefWidth="150.0" text="date_fin" />
+            <TableColumn fx:id="ColonneClientAbonnement" prefWidth="200.0" text="client" />
+            <TableColumn fx:id="ColonneRevueAbonnement" prefWidth="200.0" text="revue" />
+        </columns>
+      </TableView>
+      <FlowPane alignment="CENTER" hgap="15.0" prefHeight="75.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#AjouterAbonnement" text="Ajouter" textFill="#088a08" />
+            <Button mnemonicParsing="false" onAction="#ModifierAbonnement" text="Modifier" textFill="BLUE" />
+            <Button mnemonicParsing="false" onAction="#SupprimerAbonnement" text="Supprimer" textFill="RED" />
+         </children>
+      </FlowPane>
+   </children>
+</VBox>

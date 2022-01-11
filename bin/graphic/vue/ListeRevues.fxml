@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic.controller.ListeRevueController">
+   <children>
+      <FlowPane alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Label text="Liste des revues" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+      <TableView fx:id="TableListeRevues" prefHeight="375.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="ColonneIdRevue" prefWidth="75.0" text="id_revue" />
+          <TableColumn fx:id="ColonneTitre" prefWidth="145.0" text="titre" />
+            <TableColumn fx:id="ColonneDescription" prefWidth="145.0" text="description" />
+            <TableColumn fx:id="ColonneTarif" prefWidth="145.0" text="tarif numero" />
+            <TableColumn fx:id="ColonneVisuel" prefWidth="145.0" text="visuel" />
+            <TableColumn fx:id="ColonnePeriodicite" prefWidth="145.0" text="periodicite" />
+        </columns>
+      </TableView>
+      <FlowPane alignment="CENTER" hgap="15.0" prefHeight="75.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#AjoutListeRevue" text="Ajouter" textFill="#088a08" />
+            <Button mnemonicParsing="false" onAction="#ModifierListeRevue" text="Modifier" textFill="BLUE" />
+            <Button mnemonicParsing="false" onAction="#SupprimerListeRevue" text="Supprimer" textFill="RED" />
+         </children>
+      </FlowPane>
+   </children>
+</VBox>

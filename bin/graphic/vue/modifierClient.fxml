@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic.controller.ModifClientController">
+   <children>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../tools/images/clientModif.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </FlowPane>
+      <GridPane hgap="10.0" prefHeight="350.0" prefWidth="800.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="178.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="208.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Nom" GridPane.halignment="CENTER" />
+            <Label text="Prénom" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <TextField fx:id="txt_nom" maxWidth="150.0" promptText="nom" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+            <TextField fx:id="txt_prenom" maxWidth="150.0" promptText="prénom" GridPane.columnIndex="2" GridPane.halignment="LEFT" />
+            <Label text="No_rue" GridPane.rowIndex="1" />
+            <Label text="Voie" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Code" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Ville" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="Pays" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <TextField fx:id="txt_noRue" maxWidth="125.0" promptText="numéro de rue" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="txt_voie" maxWidth="150.0" promptText="voie" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="txt_ville" maxWidth="150.0" promptText="ville" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <TextField fx:id="txt_pays" maxWidth="150.0" promptText="pays" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+            <TextField fx:id="txt_cdepst" maxWidth="125.0" promptText="code_postal" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <FlowPane alignment="CENTER" hgap="15.0" prefHeight="50.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="lbl_erreur" textFill="RED" />
+            <Button fx:id="btnAjouter" mnemonicParsing="false" onAction="#btnModifierClient" text="Modifier" textFill="GREEN" />
+         </children>
+      </FlowPane>
+   </children>
+</VBox>
