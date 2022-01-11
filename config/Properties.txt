@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM
+"http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="bdd">criqueli1u_cpoa1</entry>
+<entry key="login">criqueli1u_appli</entry>
+<entry key="pass">Juliencri57</entry>
+<entry key="port">3306</entry>
+<entry key="url">devbdd.iutmetz.univ-lorraine.fr</entry>
+</properties>
